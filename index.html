@@ -5,32 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header>
         <ul class="navbar">
-            <li>Home</li>
-            <li>About</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
-    <section class="home-section">
+    <section class="home-section" id="home">
         <div class="welcome-container">
             <p>Hi, I'm <span class="red-font">Alex</span>.<br>
             Welcome to my page!</p>
-            <button>View My Work</button>
+            <button class="call-to-action">View My Work</button>
         </div>
         <img src="resources/pictures/ina-icon.png" alt="">
     </section>
-    <section class="about-section">
+    <section class="about-section" id="about">
         <h1 class="about-header red-font">About Me</h1>
         <p class="about-text">I'm Alex, a dedicated full-stack developer with a passion
         for crafting dynamic web applications. I'm driven by the challenge
         of turning ideas into functional, user-friendly solutions, and I'm
         excited to bring innovation to the forefront of web development.</p>
     </section>
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
         <div class="projects-heading">
             <h1>Projects</h1>
             <h2>Here is some stuff I worked on :)</h2>
@@ -81,7 +82,7 @@
             </div>
         </div>
     </section>
-    <footer class="contact-section">
+    <footer class="contact-section" id="contact">
         <h1>Contact me!</h1>
         <p class="contact-text">Please get in touch if you think our work could be mutually beneficial</p>
         <div class="contact-data-container">
@@ -94,8 +95,8 @@
                 sugma@balls.net
             </div>
             <div>
-                <button class="icon-btn"><img src="resources/svgs/github-142-svgrepo-com.svg" alt="github profile" class="icon-btn"></button>
-                <button class="icon-btn"><img src="resources/svgs/linkedin-svgrepo-com.svg" alt="linkedin profile" class="icon-btn"></button>
+                <button class="icon-btn github"><img src="resources/svgs/github-142-svgrepo-com.svg" alt="github profile" class="icon-btn"></button>
+                <button class="icon-btn linkedin"><img src="resources/svgs/linkedin-svgrepo-com.svg" alt="linkedin profile" class="icon-btn"></button>
             </div>
         </div>
     </footer>

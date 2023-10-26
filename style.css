@@ -8,6 +8,11 @@
     font-family: Raleway, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 100px;
+}
+
 body {
     background-color: #002A43;
     padding: 0 clamp(8px, 15vw, 300px);
@@ -15,6 +20,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: clamp(50px, 10vw, 100px);
+}
+
+a {
+    color: #F3F5F9;
+    text-decoration: none;
+    z-index: 99;
 }
 
 button {
@@ -58,6 +69,10 @@ header {
     gap: 50px;
 }
 
+.welcome-container {
+    animation: fade-in-left 1s ease-in-out 1;
+}
+
 .welcome-container p,
 .welcome-container span{
     font-size: 4rem;
@@ -82,6 +97,8 @@ header {
     height: auto;
     box-shadow: 0 0 5px 3px #F3F5F9;
     transform: rotate(-7deg);
+    opacity: 100;
+    animation: fade-in-top 1s ease-in-out 1;
 }
 
 .about-section {
@@ -89,6 +106,7 @@ header {
     color: #002A43;
     padding: clamp(5px, 10%, 50px);
     text-align: center;
+    animation: fade-in-right 1s ease-in-out 1;
 }
 
 .about-header,
@@ -173,6 +191,42 @@ header {
     margin-top: 5px;
     display: flex;
     align-items: center;
+}
+
+@keyframes fade-in-top {
+    from {
+        opacity: 0;
+        translate: 0 -200px;
+    }
+
+    to {
+        opacity: 100%;
+        translate: 0 0;
+    }
+}
+
+@keyframes fade-in-left {
+    from {
+        opacity: 0;
+        translate: -200px 0;
+    }
+
+    to {
+        opacity: 100%;
+        translate: 0 0;
+    }
+}
+
+@keyframes fade-in-right {
+    from {
+        opacity: 0;
+        translate: 200px 0;
+    }
+
+    to {
+        opacity: 100%;
+        translate: 0 0;
+    }
 }
 
 @media (max-width: 400px) {
