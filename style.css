@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: clamp(16px, 2vw, 20px);
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    background-color: #002A43;
+    padding: 0 clamp(8px, 15vw, 300px);
+    color: #F3F5F9;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(50px, 10vw, 100px);
+}
+
+button {
+    transition: transform .2s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #002a43b0;
+}
+
+.navbar > li:hover {
+    cursor: pointer;
+    border-bottom: 1px solid #F3F5F9;
+}
+
+.red-font {
+    color: #D50354;
+}
+
+.home-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    gap: 50px;
+}
+
+.welcome-container p,
+.welcome-container span{
+    font-size: 4rem;
+} 
+
+.welcome-container button {
+    background-color: #F3F5F9;
+    color: #002A43;
+    margin-top: 10px;
+    padding: 10px 50px;
+    border: 2px solid #D50354;
+    transition: background-color .15s linear;
+}
+
+.welcome-container button:hover {
+    background-color: #D50354;
+    color: #F3F5F9;
+}
+
+.home-section > img {
+    width: clamp(225px, 30%, 450px);
+    height: auto;
+    box-shadow: 0 0 5px 3px #F3F5F9;
+    transform: rotate(-7deg);
+}
+
+.about-section {
+    background-color: #F3F5F9;
+    color: #002A43;
+    padding: clamp(5px, 10%, 50px);
+    text-align: center;
+}
+
+.about-header,
+.about-text {
+    font-size: 1.5rem;
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projects-heading h1 {
+    font-size: 1.5rem;
+}
+
+.projects-heading h2 {
+    font-size: 1.1rem;
+}
+
+.projects-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project-card {
+    width: clamp(300px, 30%, 500px);
+    height: auto;
+    background-color: #F3F5F9;
+}
+
+.project-card > img {
+    width: 100%;
+    height: clamp(200px, 65%, 400px);
+    object-position: center;
+    object-fit: cover;
+}
+
+.card-description {
+    padding: 10px;
+    color: #002A43;
+}
+
+.card-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-btn {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+}
+
+.contact-section {
+    padding-bottom: 50px;
+}
+
+.contact-section > h1 {
+    font-size: 1.33rem;
+}
+
+.contact-data,
+.contact-text {
+    font-size: 1.2rem;
+}
+
+.contact-data-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-data {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 400px) {
+    .welcome-container p,
+    .welcome-container span{
+        font-size: 3.2rem;
+    } 
+}
+
+@media (max-width: 1800px){
+     .home-section {
+        justify-content: center;
+     }
+
+     .welcome-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+}
